@@ -1,8 +1,3 @@
-
-
-Challenge 1: crie um código que possa identificar se um número informado pertence ou não à seq. Fibonacci
-
-
 <h2>Descrição</h2>
 <p style='font-size:16px'>
   Projeto básico criado a partir de um teste realizado durante uma fase da candidatura à vaga de   Estágio em Desenvolvimento na <a href='https://targetsistemas.com.br/' about='blank'>Target      Sistemas</a>
