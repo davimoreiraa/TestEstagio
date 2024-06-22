@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+/* ------------------  STYLES -------------------*/
 import styles from './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <main className={`${styles.a} `}>
-    <h1 className={`text-danger`}>Belongs to Fibonacci ?</h1>
-    <p>Type a number to check if belongs to Fibonacci sequence</p>
-    <input type="text" />
-  </main>
-);
+/* ------------------  RESOURCES -------------------*/
+import React from 'react';
+// import { useState } from 'react';
 
-export default root
+
+export default function index() {
+    // const [num, setNum] = useState('')
+    
+    return (
+      <main className={`${styles.a} d-flex justify-content-center align-items-center`}>
+        <div className={``}>
+          <h1 className={``}>Belongs to Fibonacci ?</h1>
+          <p>Type a number to check if belongs to Fibonacci sequence</p>
+          <input type="text" />
+        </div>
+      </main>
+
+    )
+
+}
+
+
