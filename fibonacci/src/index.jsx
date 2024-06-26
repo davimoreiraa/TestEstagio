@@ -9,11 +9,16 @@ export default function Index() {
   const [nums, setNums] = useState([0,1])
     
   function belongsToF(numChosen) {
+    if(typeof numChosen !== Number) {
+      console.log('Insert a valid number')
+      return
+    }
+      
     while (numChosen > nums[nums.length -1]) {
       setNums(nums)
         nums.push(((nums[nums.length -1] + nums[nums.length -2])))
     }
-    console.log(nums)
+    
     nums.includes(numChosen) ? console.log('O número existe na Sequência Fibonacci') : console.log('O número não existe na Sequência Fibonacci')
   }
 
@@ -25,7 +30,7 @@ export default function Index() {
           <input 
           type="text"
           onKeyUp={(e) => {
-            setNum(e.target.value)
+            setNum(parseInt(e.target.value))
           }}
           />
           <button onClick={() => belongsToF(num)}>Check</button>
