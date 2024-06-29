@@ -10,17 +10,17 @@ export default function Index() {
   const [message, setMessage] = useState('')
     
   function belongsToF(numChosen) {
-    if(typeof numChosen !== 'number') {
+    if(isNaN(numChosen) && numChosen.trim() !== '') {
       setMessage('Insert a valid number')
       return
     }
-      
+    numChosen = parseInt(numChosen)
     while (numChosen > nums[nums.length -1]) {
       setNums(nums)
         nums.push(((nums[nums.length -1] + nums[nums.length -2])))
     }
     
-    nums.includes(numChosen) ? setMessage('The number exists in Fibonacci sequence') : setMessage("The number doesn'texists in Fibonacci sequence")
+    nums.includes(numChosen) ? setMessage('The number exists in Fibonacci sequence') : setMessage("The number doesn't exists in Fibonacci sequence")
   }
 
     /* ------------------ PAGE -------------------*/
@@ -35,7 +35,7 @@ export default function Index() {
               className={`me-2`}
               type="text"
               onKeyUp={(e) => {
-                setNum(parseInt(e.target.value))
+                setNum(e.target.value)
               }}
               />  
             <button className={`btn btn-secondary`} onClick={() => belongsToF(num)}>Check</button>
