@@ -1,6 +1,6 @@
 arrayInverted = []
 function choseString(string) {
-    arrayStr =  string.split('')
+    // arrayStr =  string.split('')
 
     while(arrayStr != false) {
         lastChar = arrayStr[arrayStr.length -1]
@@ -17,10 +17,3 @@ function choseString(string) {
 }
 
 choseString("Olá! Meu nome é Davi")
-
-
-// arrayStr =  string.split('').reverse()
-// for(i in arrayStr) {
-//     newStr = newStr + arrayStr[i]
-// }
-// console.log(newStr)

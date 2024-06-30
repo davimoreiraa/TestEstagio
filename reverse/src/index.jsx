@@ -5,22 +5,23 @@ import styles from './styles.module.css'
 import React, { useState } from 'react';
 
 export default function Index() {
-  const [num, setNum] = useState()
-  const [nums, setNums] = useState([0,1])
-  const [message, setMessage] = useState('')
+  const [str, setStr] = useState('')
+  var [reve, setReve] = useState([])
+  var [inverted, setInverted] = useState([])
+  var [lastChar, setLastChar] = useState('')
+  var [result, setResult] = useState('')
     
-  function belongsToF(numChosen) {
-    if(isNaN(numChosen) && !numChosen.trim() !== '') {
-      setMessage('Insert a valid number')
-      return
-    }
-    numChosen = parseInt(numChosen)
-    while (numChosen > nums[nums.length -1]) {
-      setNums(nums)
-        nums.push(((nums[nums.length -1] + nums[nums.length -2])))
+  function invert(string) {
+    setInverted([])
+    reve = string.split('')
+    
+    while(reve.length !== 0) {
+      lastChar = reve[reve.length -1]
+      result = result + lastChar
+      reve = reve.slice(0, -1)
     }
     
-    nums.includes(numChosen) ? setMessage('The number exists in Fibonacci sequence') : setMessage("The number doesn't exists in Fibonacci sequence")
+    console.log(result)
   }
 
     /* ------------------ PAGE -------------------*/
@@ -28,20 +29,20 @@ export default function Index() {
       <div className={`${styles.height}`}>
         <main className={`${styles.container} d-flex justify-content-center align-items-center`}>
           <div className={``}>
-            <h1 className={``}>Belongs to Fibonacci ?</h1>
-            <p> Type a number to check if belongs to Fibonacci sequence</p> 
+            <h1 className={``}>Reverse a string</h1>
+            <p>Type a string to see how it looks like reversed</p> 
             <div className={`d-flex justify-content-center align-items-center`}>
               <input 
               className={`me-2`}
               type="text"
               onKeyUp={(e) => {
-                setNum(e.target.value)
+                setStr(e.target.value)
               }}
               />  
-            <button className={`btn btn-secondary`} onClick={() => belongsToF(num)}>Check</button>
+            <button className={`btn btn-secondary`} onClick={() => invert(str)}>Check</button>
             </div>
             <div className={`d-flex justify-content-center mt-3`}>
-              {message}
+              {reve}
             </div>
             </div>
         </main>
