@@ -6,22 +6,11 @@ import React, { useState } from 'react';
 
 export default function Index() {
   const [str, setStr] = useState('')
-  var [reve, setReve] = useState([])
-  var [inverted, setInverted] = useState([])
-  var [lastChar, setLastChar] = useState('')
-  var [result, setResult] = useState('')
-    
+  const [result, setResult] = useState('')
+
   function invert(string) {
-    setInverted([])
-    reve = string.split('')
-    
-    while(reve.length !== 0) {
-      lastChar = reve[reve.length -1]
-      result = result + lastChar
-      reve = reve.slice(0, -1)
-    }
-    
-    console.log(result)
+    const reversedString = string.split('').reverse().join('')
+    setResult(reversedString)
   }
 
     /* ------------------ PAGE -------------------*/
@@ -41,9 +30,9 @@ export default function Index() {
               />  
             <button className={`btn btn-secondary`} onClick={() => invert(str)}>Check</button>
             </div>
-            <div className={`d-flex justify-content-center mt-3`}>
-              {reve}
-            </div>
+              <div className={`d-flex justify-content-center mt-3`}>
+                <p> <strong>String invertida:</strong> {result} </p>
+              </div>
             </div>
         </main>
       </div>
