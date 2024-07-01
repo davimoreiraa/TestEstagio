@@ -17,8 +17,10 @@ export default function Index() {
     return (
       <div className={`${styles.height}`}>
         <main className={`${styles.container} d-flex justify-content-center align-items-center`}>
-          <div className={``}>
-            <h1 className={``}>Reverse a string</h1>
+          <div>
+            <div className={`d-flex justify-content-center`}>
+              <h1 className={``}>Reverse a string</h1>
+            </div>
             <p>Type a string to see how it looks like reversed</p> 
             <div className={`d-flex justify-content-center align-items-center`}>
               <input 
