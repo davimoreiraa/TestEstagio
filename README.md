@@ -16,6 +16,9 @@
 <h2>Publicação</h2>
 <h3>Fibonacci Sequence</h3>
 <p align='center' style='font-size:17px'>Acesse a página hospedada pelo Vercel <a href='https://test-estagio.vercel.app/'>aqui</a>.</p>
+<br/>
+<h3>Reverse</h3>
+<p align='center' style='font-size:17px'>Acesse a página hospedada pelo Vercel <a href='https://test-estagio-e2lq.vercel.app/'>aqui</a>.</p>
 <hr/>
 <footer>
   <p style='font-size:17px'>🍊 Made by Davi Moreira | See my 
